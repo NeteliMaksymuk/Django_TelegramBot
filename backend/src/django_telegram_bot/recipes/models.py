@@ -7,13 +7,16 @@ class Profile(models.Model):
         ('f', 'female'),
         ('c', 'co-ed'),
     ]
+    id = models.AutoField(primary_key=True)
     first_name = models.CharField(
         verbose_name='first_name',
-        max_length=48
+        max_length=48,
+        null=True
     )
     last_name = models.CharField(
         verbose_name='last_name',
-        max_length=48
+        max_length=48,
+        null=True
     )
     telegram_username = models.CharField(
         verbose_name='telegram_username',
@@ -31,6 +34,8 @@ class Profile(models.Model):
 
     class Meta:
         verbose_name = 'Profile'
+
+
 
 
 class Recipes(models.Model):
