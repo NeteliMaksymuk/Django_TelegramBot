@@ -58,7 +58,7 @@ ROOT_URLCONF = "django_telegram_bot.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -128,3 +128,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 TOKEN = str(os.getenv("TOKEN"))
+
+
+LOGIN_REDIRECT_URL = '/profiles'
