@@ -39,7 +39,7 @@ class Profile(models.Model):
 
 
 class Recipes(models.Model):
-
+    id = models.AutoField(primary_key=True)
     recipe_name = models.CharField(
         verbose_name='recipe_name',
         max_length=48
